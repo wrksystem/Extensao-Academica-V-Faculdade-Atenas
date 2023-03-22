@@ -36,6 +36,10 @@ Feat [name]
 Ao corrigir Bug<br>
 Fix [name]
 
+## Branchs
+
+Cada integrante do Projeto deve fazer os Commits na sua respectiva branch.
+
 ## Prototipação/Screenshots
 
 ### Protótipo Inicial

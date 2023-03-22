@@ -33,7 +33,7 @@ Add function [name] or Create function [name]
 Ao atualizar funcionalidade, tela ou texto<br>
 Feat [name]
 
-Ao corrigir Bug.
+Ao corrigir Bug<br>
 Fix [name]
 
 ## Prototipação/Screenshots

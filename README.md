@@ -6,7 +6,7 @@ Gabriel<br>
 Renata<br>
 Gusttawo<br>
 Eriquis<br>
-
+teste<br>
 # Escopo do Projeto
 
 Uma Lista de Tarefas por perfis, onde os administradores consigam ver quais tarefas foram cumpridas de cada perfil(colaborador), com checks e barras de porcentagem.

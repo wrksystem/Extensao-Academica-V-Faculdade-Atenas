@@ -6,7 +6,7 @@ Gabriel<br>
 Renata<br>
 Gusttawo<br>
 Eriquis<br>
-
+teste<br>
 # Escopo do Projeto
 
 Uma Lista de Tarefas por perfis, onde os administradores consigam ver quais tarefas foram cumpridas de cada perfil(colaborador), com checks e barras de porcentagem.
@@ -35,6 +35,10 @@ Feat [name]
 
 Ao corrigir Bug<br>
 Fix [name]
+
+## Branchs
+
+Cada integrante do Projeto deve fazer os Commits na sua respectiva branch.
 
 ## Prototipação/Screenshots
 

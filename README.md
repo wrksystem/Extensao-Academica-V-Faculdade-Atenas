@@ -102,7 +102,8 @@
   },
 ```
 <h1>RESULTADO<h1>
-<img alt="GitHub" src=".\printcadastro.jpg" height=600>
+<img alt="GitHub" src="![printcadastro](https://user-images.githubusercontent.com/128649731/230916437-874c5965-820a-49f5-a437-cb66e0fa3b28.jpg)
+" height=600>
 
 <h2>Conclusão</h2>
 <p align="justify"> O formulário de cadastro compõem 3 campos de Input, onde o usuário poderá digitar dados, como: nome, email e senha. Possui um botão que ao ser tocado pelo usuário, seus dados serão enviados, e mostrados no terminal.</p>

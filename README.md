@@ -1,82 +1,108 @@
-# Extensão Academica V Faculdade Atenas
+<h1 align="center"> Documentação do Formulário de Cadastro</h1>
 
-Integrante do Projeto:
-Werik<br>
-Gabriel<br>
-Renata<br>
-Gusttawo<br>
-Eriquis<br>
-teste<br>
-# Escopo do Projeto
+<p align="justify"> O formulário de cadastro foi criado para que o usuário possa ter seus dados cadastrados e posteriormente ter acesso ao aplicativo.</p>
 
-Uma Lista de Tarefas por perfis, onde os administradores consigam ver quais tarefas foram cumpridas de cada perfil(colaborador), com checks e barras de porcentagem.
+<h2> Inputs</h2>
+<p align="justify"> Foram criados três Inputs para os campos: Username, email e password. Em cada Input será fornecido ao usuário uma dica do valor a ser digitado, o valor será armazenado. No Input do password, usaremos a funcionalidade secureTextEntry que em caso de verdadeiro, irá ocultar o texto digitado. Todos os Inputs serão estilizados da mesma forma.</p>
 
-Solicitante: Agência de Marketing de Sete Lagoas.
+```
+        <TextInput // Input do nome do usuário
+          placeholder="Nome"
+          placeholderTextColor="#becbff"
+          style={styles.textInput}
+          onChangeText={setUsername}
+          value={username}
+        />
 
-## Funcionalidades
+        <TextInput // Input do email do usuário
+          placeholder="Email"
+          placeholderTextColor="#becbff"
+          style={styles.textInput}
+          onChangeText={setEmail}
+          value={email}
+        />
 
-Adicionar Colaborador.                                                ( )<br>
-Autenticação de Usuário.                                              ( )<br>
-Lista de Tarefas.                                                     ( )<br>
-Validação de Informações para identificar Colaborador e Administrador.( )<br>
-Adicionar, Listar e Checar tarefa atribuída.                          ( )<br>
+        <TextInput // Input da senha do usúario
+          placeholder="Senha"
+          placeholderTextColor="#becbff"
+          style={styles.textInput}
+          secureTextEntry={true}
+          onChangeText={setPassword}
+          value={password}
+        />
+```
 
-O Gerencimento da equipe, com todas as funcionalidades que será utilizadas no projeto, tasks e damandas, serão realizadas através da ferramenta Trello, onde iremos documentar o passo a passo da prototipação, criação e desenvolvimento da APLICAÇÃO.
+<h2> Button </h2>
+<p align="justify"> Usaremos do TouchableOpacity para que responda com opacidade quando clicar no botão ACESSAR, quando o botão for clicado, todos os dados serão puxados e mostrados no terminal. Foram criados dois blocos de estilização para estilizar ao botão e ao texto do botão.</p>
 
-## Padrões de Commit.
+```
+        <TouchableOpacity style={styles.formButton} onPress={handleSignIn}>
+          <Text style={styles.buttonText}>ACESSAR</Text>
+        </TouchableOpacity>
+```
 
-Ao criar commits, esses devem seguir alguns padrões para evitar bagunça na timeline de commits do projeto.
+<h1>Estilização</h1>
+<p align="justify"> No elemento text temos alguns comandos de estilização como, o título, com tamanho de fonte, peso ou intensidade,a cor, o alinhamento, e a distância entre o conteúdo e suas bordas.</P>
 
-Ao adicionar nova funcionalidade<br>
-Add function [name] or Create function [name]
+```
+  text: {
+    fontSize: 40,
+    fontWeight: "800", 
+    color: "#3E0CB3",
+    alignItems: "center", 
+    padding: 35,
+    paddingHorizontal: 35
+  },
+```
+<p align="justify"> No elemento textInput temos alguns comandos de estilização como, altura, borda da largura, cor da borda, a margin, borda arredondada, e a distância entre o conteúdo e suas bordas.</p>
 
-Ao atualizar funcionalidade, tela ou texto<br>
-Feat [name]
+```
+  textInput: {
+    height: 50,
+    borderWidth: 1,
+    borderColor: "#becbff",
+    marginHorizontal: 20,
+    marginVertical: 10,
+    borderRadius: 25,
+    paddingLeft: 12
+  },
+```
 
-Ao corrigir Bug<br>
-Fix [name]
+<p align="justify"> No elemento formButton temos alguns comandos de estilização como, cor de fundo do botão, altura, alinhamento, borda arredondada, margem, borda de largura, cor da borda, estilização de sombra do botão.</p>
 
-## Branchs
+```
+  formButton: {
+    backgroundColor: "#3E0CB3",
+    height: 55,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 35,
+    marginHorizontal: 20,
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: "white",
+    shadowColor: "#000", 
+    shadowOffset: {
+      width: 0,
+      height: 4
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
+  },
+```
+<p align="justify">No elemento buttonText temos alguns comandos de estilização para o texto do botão como, tamanho da fonte, largura da fonte, a cor e o espaçamento entre as letras.</p>
 
-Cada integrante do Projeto deve fazer os Commits na sua respectiva branch.
+``` 
+  buttonText: {
+    fontSize: 20,
+    fontWeight: "600",
+    color: "white",
+    letterSpacing: 0.5
+  },
+```
+<h1>RESULTADO<h1>
+<img alt="GitHub" src=".\printcadastro.jpg" height=600>
 
-## Prototipação/Screenshots
-
-### Protótipo Inicial
-![Protótipo  Agência de Marketing](https://user-images.githubusercontent.com/51803873/227059000-0315122b-6b37-46c2-ab7a-28102827ecd8.jpg)
-
-Esse protótipo estático foi construído no FIGMA, não é definitivo e esta sujeito a alterações durante o percorrer do projeto, portanto não reflete a versão final da APLICAÇÃO.
-
-# Tecnologias
-
-A APLICAÇÃO será feita utilizando HTML, CSS e Javascript para ser desenvolvida.
-
-### Bibliotecas/Framworks e Ferramentas Utilizadas
-
-Node.js V-18.15.0 LTS<br>
-React Native<br>
-Expo<br>
-NPM<br>
-Yarn<br>
-Chocolatey<br>
-
-Inicialmente será utilizado o banco de dados do FIREBASE para gerenciar os dados e informações da APLICAÇÃO.
-
-
-# RECOMENDAÇÕES PARA CLONAR O PROJETO
-
-Instale o node.js utilizando o site oficial. https://nodejs.org/en , utilize a versão LTS para garantir estar o mais atualizado possível.<br>
-Em sequência instale o Chocolatey. https://chocolatey.org/install , as instruções de instalação estão descritas na página oficial. <br>
-
-OBS: Caso faça a instalação do Node.js utilizando o .exe, não será necessário instalar o Chocolatey pois o mesmo vem por padrão em conjunto do Node.js e do NPM.
-
-Consulte a documentação do EXPO, https://docs.expo.dev/get-started/installation/ para instalar no projeto e utilizar para fazer a visualização da APLICAÇÃO de forma WEB ou diretamente no Dispositivo Mobile.
-
-
-
-
-
-
-
-
-
+<h2>Conclusão</h2>
+<p align="justify"> O formulário de cadastro compõem 3 campos de Input, onde o usuário poderá digitar dados, como: nome, email e senha. Possui um botão que ao ser tocado pelo usuário, seus dados serão enviados, e mostrados no terminal.</p>

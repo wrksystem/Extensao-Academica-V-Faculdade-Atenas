@@ -7,11 +7,13 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
 
 export default function Cadastro_usuario({}) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [hidePass, setHidePass] = useState (true);
 
   function handleSignIn() {
     const data = {
@@ -44,15 +46,26 @@ export default function Cadastro_usuario({}) {
           onChangeText={setEmail}
           value={email}
         />
-
-        <TextInput // Input da senha do usúario
-          placeholder="Senha"
-          placeholderTextColor="#becbff"
-          style={styles.textInput}
-          secureTextEntry={true}
-          onChangeText={setPassword}
-          value={password}
-        />
+            
+        <View style={styles.inputPassword}>
+          <TextInput // Input da senha do usúario
+            placeholder="Senha"
+            placeholderTextColor="#becbff"
+            style={styles.textInput}
+            secureTextEntry={hidePass}
+            onChangeText={setPassword}
+            value={password}
+          />
+          <TouchableOpacity
+            onPress={() => setHidePass(!hidePass)}
+          >
+            {hidePass ? (
+              <Ionicons name="eye" color="#becbff" size={25} />
+            ) : (
+              //mostrar tracinho no olho
+              <Ionicons name="eye-off" color="#becbff" size={25} />
+            )}
+              </TouchableOpacity></View>
 
         <TouchableOpacity style={styles.formButton} onPress={handleSignIn}>
           <Text style={styles.buttonText}>ACESSAR</Text>
@@ -75,7 +88,7 @@ const styles = StyleSheet.create({
     color: "#3E0CB3",
     alignItems: "center",
     padding: 35,
-    paddingHorizontal: 35,
+    paddingHorizontal:  '16%'
   },
   textInput: {
     //inputs = caixinhas
@@ -86,6 +99,13 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderRadius: 25,
     paddingLeft: 12,
+    width: '85%'
+  },
+  inputPassword:{ // style da view
+    flexDirection: 'row',
+    width: '90%',
+    alignItems:'center',
+    justifyContent: 'center'
   },
   formButton: {
     // estilização do botão em si

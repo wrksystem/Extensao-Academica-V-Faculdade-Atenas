@@ -9,7 +9,6 @@ import {
 } from "react-native";
 
 export default function Login_Usuario({}) {
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -28,15 +27,7 @@ export default function Login_Usuario({}) {
       <Text style={styles.text}>Login</Text>
       <StatusBar style="auto" />
 
-      <View>
-        <TextInput // Input do nome do usuário
-          placeholder="Nome"
-          placeholderTextColor="#becbff"
-          style={styles.textInput}
-          onChangeText={setUsername}
-          value={username}
-        />
-
+      <View>                        
         <TextInput // Input do email do usuário
           placeholder="Email"
           placeholderTextColor="#becbff"

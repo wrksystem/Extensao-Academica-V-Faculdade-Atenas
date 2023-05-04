@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Login_Usuario({}) {
+export default function Cadastro_usuario({}) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +25,7 @@ export default function Login_Usuario({}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Login</Text>
+      <Text style={styles.text}>CADASTRE-SE</Text>
       <StatusBar style="auto" />
 
       <View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    //texto título = Login
+    //texto título = cadastro
     fontSize: 40,
     fontWeight: "800",
     color: "#3E0CB3",
